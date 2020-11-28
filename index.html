@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature Converter</title>
+	<script type="text/javascript">
+		function submit(){
+			debugger;
+			var name=document.getElementById("name").value;
+
+               var retVal = confirm("Hello ! "+ name + "Do you want to play ?");
+               if( retVal == true ) {
+                   window.open("magic.html");
+               } else {
+                  window.open("index.html");
+               }
+		}
+	</script>
+	<style type="text/css">
+	#border{ 
+	  	border: 10px solid transparent;
+	  	border-image: url(border.png) 30 round;
+	}
+	.bgimg{
+		background-image: url('f5.jpg');
+		width: 100%;
+		height: 80vh;
+		border-radius: 10px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-top: 20px;
+	}
+	.bgimg:hover{
+		background-image: url('f2.jpg');
+		width: 100%;
+		height: 80vh;
+		border-radius: 10px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-top: 20px;
+	}
+	.btn{
+	  font-size: 30px;
+	  text-align: center;
+	  color:white;
+	  background-color:black;
+	  border: 2px solid white;
+	  border-radius: 15px;
+	  padding:10px;
+	  }
+	</style>
+</head>
+<body style="background-color: black; ">
+	<div class="container" >
+			<div id="border">
+				<h1 style="text-align: center;color: white;border-radius: 10px;font-size: 50px;"><b>Magic Eight Balls ...</b></h1>
+			</div>
+		<div class="container bgimg">
+			<div class="container" style="background-image: linear-gradient(#01030e, #ffeb3b0f);width: 70%;height: 65vh;margin-left:15%;border-radius: 10px;padding-top: 37px; ">
+				<div><h1 style="color: white;font-size: 55px;text-align: center;">Want To Know Your Fortune ?</h1></div>
+				<div style="padding-top: 30px;text-align: center;">
+					<label  style=" padding-top: 25px;font-size: 35px;text-align: center;color: white;"> Enter Your Name - </label>
+					<input type="text" id="name" style="border-radius: 10px;border:2px solid black;height: 5vh;font-size: 20px;">
+				</div>
+				<div style="padding-top: 50px;text-align: center;">
+					<button class="btn" onclick="submit()"><b>Submit</b></button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

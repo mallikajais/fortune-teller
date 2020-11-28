@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var q=['When will I find a job?','What does my circle of friends look like?','What are some things you can tell me about my partner?','Will my ex come back into my life?','Will I get the promotion at work?','When will I have a child? ','When will I find a true lover?','When will I get married?'];
+		var a=['It is certain','It is decidedly so','Reply hazy try again','Cannot predict now','Do not count on it','My sources say no','Outlook not so good','Signs point to yes'];
+		var i=0;
+		function shake(){
+			var ar=Math.floor(Math.random() * 8);
+			if(i<8){
+				document.getElementById("answer").innerHTML="";
+				document.getElementById("question").innerHTML=q[i];
+				setTimeout(function(){ document.getElementById("answer").innerHTML=a[ar]; }, 3000);
+				i++;
+			}
+			else{
+				window.open("end.html");
+			}
+		}
+		function quit(){
+		 	window.open("index.html")
+		}
+	</script>
+	<style type="text/css">
+	.bg1img{
+		background-image: url('p.webp');
+		width: auto;
+		height: 86vh;
+		border-radius: 10px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-top: 20px;
+	}
+	.bg1img:hover{
+		background-image: url('f1.jpg');
+		width: auto;
+		height: 86vh;
+		border-radius: 10px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		margin-top: 20px;
+	}
+	.btn{
+	  font-size: 30px;
+	  text-align: center;
+	  color:white;
+	  background-color:black;
+	  border: 2px solid white;
+	  border-radius: 15px;
+	 	padding: 10px;
+	  margin-left: 50px;
+	  }
+	.move{
+		animation: shake 0.5s;
+	  	animation-iteration-count: infinite;
+	}
+	@keyframes shake {
+   0% { transform: translate(1px, 1px) rotate(9deg); }
+  10% { transform: translate(-1px, -2px) rotate(-5deg); }
+  20% { transform: translate(-3px, 0px) rotate(9deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+}
+	</style>
+</head>
+<body class="bg1img">
+	<div class="container">
+		<div class=" row text-center" style="display: flex;height: 30vh;border-radius: 10px;">
+			
+			<div class="col-md-10 " style="margin-right: 150px;width: 400%;">
+				<h1 style="text-align: center;padding-top: 20px;color: white;padding-bottom:20px;background-image: linear-gradient(#01051b, #2196f324);border-radius: 10px;font-size: 50px;margin-left: 100px;"><b>Welcome To The Magical World ! </b></h1>
+			</div>
+		</div>	
+		<div class="container-fluid" style="width: 60%;height: 30vh;margin-left:15%;border-radius: 10px;">
+			<div class="row" style="display: flex; ">
+				<div class="col-md-2 col-sm-2">
+					<div class="move" id="shake">
+						<img src="b1.png" style="height: 55vh;width: 75%;">
+						<div style="background-color: white;"><p id="predict"></p></div>
+					</div>
+				</div>
+				<div class="col-md-10 col-sm-10" style="background-color: #00000066;">
+					<div class="text-center">
+						<div style="margin-left: 70px;"><label id="question" style="font-size: 55px;color: white;text-align: center;color: #00bcd4;"></label></div>
+						<div style="margin-bottom: 38px;margin-top: 30px;margin-left: 70px;"><label id="answer"  style="font-size: 40px;color: white;text-align: center;"></label></div>
+						<div style="display: flex;">
+							<button class="btn" style="text-align: center;margin-left: 70px;" onclick="shake()"><b>   Continue   </b></button>
+							<button class="btn" style="text-align: center;margin-left: 70px;margin-right: 60px;" onclick="quit()"><b>   Quit   </b></button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</body>
+</html>
